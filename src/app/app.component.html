@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form (submit)="onSubmit()">
+<input type="text" name="firstName"
+required minlength="4" 
+maxlength="24" 
+[(ngModel)]='user.firstName' #firstName="ngModel"
+/> 
+{{firstName.errors | json}} {{firstName.valid | json}}
+
+<input type="text" name="lastName"
+required minlength="4" 
+maxlength="24" 
+[(ngModel)]='user.lastName' 
+#lastName="ngModel"
+/> 
+{{lastName.errors | json}} {{lastName.valid | json}}
+<input type='submit'>
+</form>
+
